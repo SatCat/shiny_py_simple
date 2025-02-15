@@ -1,2 +1,5 @@
-[build] 
- command = "python app.py"
+[dev] 
+  command = "python app.py"
+  port = 80
+  targetPort = 8000
+  autoLaunch = true
