@@ -90,6 +90,6 @@ def server(input: Inputs, output: Outputs, session: Session):
 
 app = App(app_ui, server)
 # запускаем сервер прям отсюда
-config = uvicorn.Config(app, host ='0.0.0.0', port = 8100,)
+config = uvicorn.Config(app, host ='0.0.0.0', port = 80,)
 server = uvicorn.Server(config)
 await server.serve()
