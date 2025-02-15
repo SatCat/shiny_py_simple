@@ -87,9 +87,6 @@ def server(input: Inputs, output: Outputs, session: Session):
     def brush_info():
         return "brush:\n" + json.dumps(input.plot1_brush(), indent=2)
 
-
-app = App(app_ui, server)
-# запускаем сервер прям отсюда
-config = uvicorn.Config(app, host ='0.0.0.0', port = 80,)
-server = uvicorn.Server(config)
-await server.serve()
+if __name__ == "__main__":
+    app = App(app_ui, server, debug=True)
+    uvicorn.run(app, host="0.0.0.0", port=5000)
