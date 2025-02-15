@@ -1,5 +1,5 @@
 [dev] 
+  framework = "#custom"
   command = "python app.py"
-  port = 80
   targetPort = 8000
-  autoLaunch = true
+  
